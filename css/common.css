@@ -1,0 +1,405 @@
+body {
+
+    margin: 0 auto;
+    overflow-x: auto;
+    font-family: "SourceHanSansCN","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"\5B8B\4F53";
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+div {
+    box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance: none !important;
+	margin: 0;
+}
+.c-container {
+    margin:0 auto;
+    position: relative;
+    width: 960px;
+}
+
+/*@media screen and (max-width: 1024px){*/
+    /*body{font-size: 12px}*/
+    /*.header {*/
+        /*height: 40px;*/
+    /*}*/
+    /*.container{*/
+        /*width:960px;*/
+    /*}*/
+/*} !*>=1024的设备屏幕*!*/
+
+/*@media screen and (max-width: 1366px) {*/
+    /*.header {*/
+        /*height: 56px;*/
+    /*}*/
+    /*.container{*/
+        /*width:1000px;*/
+    /*}*/
+/*} !*>=1366的设备屏幕*!*/
+
+/*@media screen and (min-width: 1366px) and (max-width: 1440px) {*/
+    /*.header {*/
+        /*height: 60px;*/
+    /*}*/
+    /*.container{*/
+        /*width:1200px;*/
+    /*}*/
+/*} !*>=1440的设备屏幕*!*/
+
+/*@media screen and (min-width: 1440px) and (max-width: 1680px) {*/
+    /*.header {*/
+        /*height: 64px;*/
+    /*}*/
+    /*.container{*/
+        /*width:1400px;*/
+    /*}*/
+/*}  !*>=1680的设备屏幕*!*/
+
+/*@media screen and (min-width: 1680px) and (max-width: 1920px) {*/
+    /*.header {*/
+        /*height: 68px;*/
+    /*}*/
+    /*.container{*/
+        /*width:1600px;*/
+    /*}*/
+/*}  !*>=1920的设备屏幕*!*/
+
+/*@media screen and (min-width: 1920px) {*/
+    /*body{font-size: 18px;}*/
+    /*.header {*/
+        /*height: 70px;*/
+    /*}*/
+    /*.container{*/
+        /*width:1600px;*/
+    /*}*/
+/*}  !*>=1920的设备屏幕*!*/
+
+
+.header {
+    height: 60px;
+    /*background-color: #0b0b0b;*/
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    /*-webkit-transition: all linear .5s 0s;*/
+    /*-moz-transition: all linear .5s 0s;*/
+    /*-ms-transition: all linear .5s 0s;*/
+    /*-o-transition: all linear .5s 0s;*/
+    /*transition: all linear .5s 0s;*/
+}
+.header .header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.header .header-container .logo {
+    /*width: 70%;*/
+}
+.header .header-container .logo h1 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: normal;
+}
+.header .header-container .top-nav {
+    width: 30%;
+}
+.header .header-container .top-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header .header-container .top-nav ul .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .header-container .top-nav ul .nav-item a {
+    color: rgba(255,255,255,.8);
+    /*display: inline-block;*/
+    /*width: 100%;*/
+    text-align: center;
+    -webkit-transition: color .4s;
+    -moz-transition:color .4s;
+    -ms-transition: color .4s;
+    -o-transition:color .4s;
+    transition:color .4s;
+}
+.header .header-container .top-nav ul .nav-item a:hover {
+    color: rgb(255,255,255);
+    -webkit-transition:all .4s;
+    -moz-transition:all .4s;
+    -ms-transition:all .4s;
+    -o-transition:all .4s;
+    transition:all .4s;
+}
+.footer {
+    padding: 10px 0;
+    background-color: #0b0b0b;
+}
+.footer .information {
+    font-size: 12px;
+    color: #fff;
+}
+
+/*banner*/
+.banner {
+    width: 100%;
+    height: 440px;
+    -webkit-background-size: cover;
+    background-size: cover !important;
+    align-self: center;
+}
+.banner .c-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.banner-text .slogan,.banner-text .title {
+    color: #fff;
+    font-size: 38px;
+}
+.banner-text .describe {
+    font-size: 16px;
+    color: #fff;
+}
+.banner-text .learn-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.banner-text .learn-more a {
+    color: #1475f8;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+
+/*中间内容*/
+.section {
+    background-color: #fff;
+    padding: 100px 0;
+    width: 100%;
+}
+.bg-dark-gray {
+    background-color: #f5f7fb;
+}
+.headline h4 {
+    color: #444444;
+    font-size: 26px;
+}
+.headline p {
+    /*color: #a0a0a0;*/
+    font-size: 16px;
+}
+
+.contact {
+    color: #1475f8;
+}
+.contact-form {
+
+}
+#contactForm ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#contactForm ul li {
+    width: 40%;
+}
+#contactForm ul li > * {
+    display: block;
+    font-size: 16px;
+}
+#contactForm ul li label {
+    cursor: default;
+}
+#contactForm ul li label.error {
+    /*opacity: 0;*/
+    font-size: 14px;
+    color: red;
+}
+#contactForm ul li .item {
+    cursor: default;
+
+}
+
+#contactForm ul li .item:before {
+    content: '*';
+    color: #f02424;
+    margin-left: -24px;
+    margin-right: 20px;
+}
+#contactForm ul li input {
+    width: 100%;
+    padding:3px 10px;
+}
+.contact-form .button-zone {
+    display: flex;
+    justify-content: center;
+}
+.contact-form .button-zone button {
+    border: 0;
+    outline: none;
+    width: 200px;
+    height: 34px;
+    background: url("../img/jjfa_button.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+.narrow .c-container {
+    padding: 0 200px;
+}
+
+.card-top h5 {
+    font-size: 16px;
+}
+.card-bottom p {
+    font-size: 14px;
+}
+.card-div a {
+    cursor: default;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        height: 440px;
+    }
+    .banner-text .slogan,.banner-text .title {
+        font-size: 38px;
+    }
+    .banner-text .learn-more a,.banner-text .describe {
+        font-size: 16px;
+    }
+    .c-container {
+        width: 960px;
+    }
+    .headline h4 {
+        font-size: 26px;
+    }
+    .headline .title p {
+        font-size: 14px;
+    }
+    .headline p {
+        /*color: #a0a0a0;*/
+        font-size: 16px;
+    }
+    .card-top p {
+        font-size: 22px;
+    }
+    .card-top h5 {
+        font-size: 16px;
+    }
+    .card-bottom p {
+        font-size: 14px;
+    }
+    .card-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-div {
+        width: 20%;
+    }
+    #contactForm ul li > * {
+        display: block;
+        font-size: 16px;
+    }
+}
+@media (min-width: 992px) {
+    .banner {
+        height: 440px;
+    }
+    .banner-text .slogan,.banner-text .title {
+        font-size: 38px;
+    }
+    .banner-text .learn-more a,.banner-text .describe {
+        font-size: 16px;
+    }
+    .c-container {
+        width: 960px;
+    }
+
+    .headline h4 {
+        font-size: 26px;
+    }
+    .headline .title p {
+        font-size: 14px;
+    }
+    .headline p {
+        /*color: #a0a0a0;*/
+        font-size: 16px;
+    }
+    .card-top p {
+        font-size: 22px;
+    }
+    .card-top h5 {
+        font-size: 16px;
+    }
+    .card-bottom p {
+        font-size: 14px;
+    }
+    .card-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-div {
+        width: 20%;
+    }
+    #contactForm ul li > * {
+        display: block;
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    .banner {
+        height: 510px;
+    }
+    .banner-text .slogan,.banner-text .title {
+        font-size: 44px;
+    }
+    .banner-text .learn-more a,.banner-text .describe {
+        font-size: 18px;
+    }
+    .c-container {
+        width: 1140px;
+    }
+
+    .headline h4 {
+        font-size: 30px;
+    }
+    .headline .title p {
+        font-size: 18px;
+    }
+    .headline p {
+        /*color: #a0a0a0;*/
+        font-size: 20px;
+    }
+    .card-top p {
+        font-size: 24px;
+    }
+    .card-top h5 {
+        font-size: 18px;
+    }
+
+    .card-bottom p {
+        font-size: 16px;
+    }
+    #contactForm ul li > * {
+        display: block;
+        font-size: 16px;
+    }
+
+}
+

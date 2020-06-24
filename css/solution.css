@@ -1,0 +1,66 @@
+.banner {
+    background: url("../img/jjfa_banner.png") no-repeat center center;
+}
+.section .c-container {
+    padding: 0 100px;
+}
+.narrow .c-container {
+    padding: 0 180px;
+}
+.section .content-1 {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    /*flex-wrap: nowrap;*/
+    margin: 0 auto;
+}
+.section .content-1 div {
+    /*display: inline-block;*/
+    color: #505050;
+
+}
+.section .content-1 .right {
+    flex: 1;
+}
+.section .content-1 .left:before,.section .content-2 .left:before {
+    display: inline-block;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url("../img/point.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.section .content-2 {
+    font-size: 16px;
+    color: #505050;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .section .content-1 {
+        font-size: 16px;
+    }
+    .section .content-2 {
+        font-size: 16px;
+    }
+}
+@media (min-width: 992px) {
+    .section .content-1 {
+        font-size: 16px;
+    }
+    .section .content-2 {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    .section .content-1 {
+        font-size: 20px;
+    }
+    .section .content-2 {
+        font-size: 20px;
+    }
+}

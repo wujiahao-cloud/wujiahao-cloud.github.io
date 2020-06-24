@@ -1,0 +1,116 @@
+
+.banner {
+    background: url("../img/sy_banner.png") no-repeat center bottom;
+}
+.gl{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: 1px solid #1475f8;
+    border-bottom: 1px solid #1475f8;
+    -webkit-transform:rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.card {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-top: 5px solid #acb5bd !important;
+}
+.card-top {
+    padding:30px 0px;
+    background-color: #fff;
+}
+.card-top p {
+     font-size: 30px;
+     color: #444444;
+ }
+.card-top h5,.card-bottom p {
+    font-size: 20px;
+    color: #444444;
+}
+.card-bottom {
+    background-color: #f8f9fc;
+    padding: 30px 0;
+    min-height: 165px;
+}
+.card-box {
+    display: flex;
+    justify-content: space-between;
+}
+.card-div {
+    width: 20%;
+}
+.img-box img {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .banner-text .slogan {
+    font-size: 38px;
+    }
+    .banner-text .learn-more a {
+    font-size: 16px;
+    }
+    .headline h4 {
+        font-size: 26px;
+    }
+    .headline .title p {
+        font-size: 14px;
+    }
+    .card-top p {
+        font-size: 22px;
+    }
+    .card-top h5, .card-bottom p {
+        font-size: 14px;
+    }
+    .card-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-div {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .headline h4 {
+    font-size: 26px;
+    }
+    .headline .title p {
+    font-size: 14px;
+    }
+    .card-top p {
+        font-size: 22px;
+    }
+    .card-top h5, .card-bottom p {
+        font-size: 14px;
+    }
+    .card-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-div {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .headline h4 {
+        font-size: 30px;
+    }
+    .headline .title p {
+        font-size: 18px;
+    }
+    .card-top p {
+        font-size: 24px;
+    }
+    .card-top h5,.card-bottom p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,57 @@
+/*
+Description: Reset css inside content for all pages.
+Version: 2.0
+Time: 2013-10-02 22:00
+Author: Jensen
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre, a, abbr, acronym, del, cite, address, small, sub, sup, b, u, i, center, font, em, strong, dl, dt, dd, ul, ol, li, form, fieldset, legend, table, caption, thead, tbody, tfoot, tr, th, td { margin: 0; padding: 0; outline: none; }
+
+ul, ol { list-style-type: none; -webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start: 0; -webkit-margin-end: 0; -webkit-padding-start: 0; }
+
+a { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:focus { outline: none; }
+
+li:focus { outline: none; }
+
+fieldset, img { border: 0; }
+
+img { display: block; max-width: 100%; vertical-align: top; }
+
+q, blockquote { quotes: "" ""; }
+
+q:before, q:after, blockquote:before, blockquote:after { content: ""; }
+
+del { text-decoration: line-through; }
+
+ins { text-decoration: underline; }
+
+sup { vertical-align: super; }
+
+sub { vertical-align: sub; }
+
+cite, em, dfn { font-style: normal; }
+
+table { border-collapse: collapse; border-spacing: 0; empty-cells: show; }
+
+caption, th, td { font-weight: normal; text-align: left; }
+
+input, textarea, select, button { font-size: 100%; font-family: inherit; margin: 0; padding: 0; }
+
+label, button { cursor: pointer; }
+
+textarea { white-space: pre; resize: none; border: 1px solid #ececec; }
+
+button, input, select, textarea { font-size: 100%; }
+
+article, aside, canvas, details, figcaption, figure, footer, header, menu, nav, section, summary { margin: 0; padding: 0; display: block; border: 0; font-size: 100%; }
+
+.clearfix { /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */ *zoom: 1; }
+
+.clearfix:before, .clearfix:after { content: " "; /* 1 */ display: table; /* 2 */ }
+
+.clearfix:after { clear: both; }
+
+#jiathis_webchat img { display: inline-block; }

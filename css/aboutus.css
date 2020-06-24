@@ -1,0 +1,31 @@
+.banner {
+    background: url("../img/gywm_banner.png") no-repeat center center;
+}
+.c-container {
+    padding: 0 100px;
+}
+.section .content p {
+    font-size: 20px;
+}
+.img-zone {
+    margin: 0 auto;
+}
+.img-zone img {
+    display: block;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .section .content p {
+        font-size: 16px;
+    }
+}
+@media (min-width: 992px) {
+    .section .content p {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    .section .content p {
+        font-size: 20px;
+    }
+}

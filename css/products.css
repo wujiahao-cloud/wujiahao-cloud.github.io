@@ -1,0 +1,96 @@
+.banner {
+    background: url("../img/cp_banner.png") no-repeat center center;
+}
+.img-box {
+    padding: 0 150px;
+}
+.img-box img {
+    display: block;
+    margin: 0 auto;
+}
+.card-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-div {
+    width: 50%;
+
+}
+.card-div .card {
+    width: 60%;
+    margin: 0 auto;
+}
+.card {
+    border-top: 5px solid #acb5bd !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.card-top {
+    padding: 20px 0;
+    color: #000;
+    background-color: #fff;
+}
+.card-bottom {
+    padding: 20px;
+    color: #000;
+    background-color: #f5f7fb;
+    min-height: 120px;
+}
+
+.switch-box {
+
+}
+.switch-box .switch {
+    display: flex;
+    justify-content: center;
+    width: 32%;
+    background-color: #f5f7fb;
+    margin: 0 auto;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.switch-box .switch div {
+    padding: 10px 0;
+    text-align: center;
+    width: 50%;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.switch-box .switch div.click {
+    background-color: #8697b9;
+    color: #fff;
+}
+.switch-content-describe {
+    font-size: 16px;
+    text-align: center;
+}
+.switch-content {
+    display: none;
+}
+.switch-content.click {
+    display: block;
+}
+@media (min-width: 768px) {
+    .switch-content-describe {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media (min-width: 992px) {
+    .switch-content-describe {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media (min-width: 1200px) {
+    .switch-content-describe {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+}
+
