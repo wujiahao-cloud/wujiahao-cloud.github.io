@@ -134,22 +134,51 @@
         </div>
     </div>
 </div>
-<div class="section">
+<div class="section bg-dark-gray narrow">
     <div class="c-container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <div class="headline section-title mb-4 pb-2">
-                    <h4 class="title mb-4">服务客户</h4>
-                    <p class="text-muted mb-0 mx-auto">产品获得各个行业的企业认可</p>
+                <div class="headline section-title mb-5 pb-2">
+                    <h4 class="title mb-4">索取产品及解决方案 </h4>
+                    <p class="contact mb-0 mx-auto">我们的售前工程师会尽快联系你</p>
                 </div>
             </div>
         </div>
-        <div class="img-box">
-            <img src="./img/sy_kehu.png" alt="">
+        <div class="contact-form">
+            <form id="contactForm" class="mb-5">
+                <ul>
+                    <li class="mb-3">
+                        <label class="item mb-2">您的姓名</label>
+                        <input autocomplete="off" class="mb-2" type="text" name="name" id="name">
+                    </li>
+                    <li class="mb-3">
+                        <label class="item mb-2">您的公司</label>
+                        <input autocomplete="off" class="mb-2" type="text" name="company" id="company">
+                    </li>
+                    <li class="mb-3">
+                        <label class=" item mb-2">您的手机号</label>
+                        <input autocomplete="off" class="mb-2" type="number" name="phone" id="phone">
+                    </li>
+                    <li class="mb-3">
+                        <label class="item mb-2">公司邮箱</label>
+                        <input autocomplete="off" class="mb-2" type="email" name="email" id="email">
+                    </li>
+                    <li class="mb-3">
+                        <label class="item mb-2">您的职位</label>
+                        <input autocomplete="off" class="mb-2" type="text" name="position" id="position">
+                    </li>
+                    <li class="mb-3">
+                        <label class="item mb-2">公司所在城市</label>
+                        <input autocomplete="off" class="mb-2" type="text" name="city" id="city">
+                    </li>
+                </ul>
+            </form>
+            <div class="button-zone">
+                <button id="submitBtn">提交</button>
+            </div>
         </div>
     </div>
 </div>
-
 <div class="footer">
     <div class="c-container">
         <div class="text-center">
@@ -161,7 +190,10 @@
     </div>
 </div>
 <script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/jquery.validate.min.js"></script>
+<script src="./js/smtp.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/validate.js"></script>
 <script>
     $(document).ready(function() {
         $('.nav-item').eq(0).children().css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', 'bold')
