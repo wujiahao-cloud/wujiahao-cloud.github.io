@@ -50,15 +50,31 @@
     margin: 0 auto;
 }
 
+.sub-banner {
+    background: url("../img/sy_efficient.png") no-repeat center bottom;
+}
+.displaybox {
+    display: inline-block;
+}
+.sub-banner .sub-banner-box .box-content {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 50px;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+}
+
+
+
 @media (min-width: 768px) {
     .banner-text .slogan {
     font-size: 38px;
     }
     .banner-text .learn-more a {
     font-size: 16px;
-    }
-    .headline h4 {
-        font-size: 26px;
     }
     .headline .title p {
         font-size: 14px;
@@ -79,9 +95,6 @@
 }
 
 @media screen and (min-width: 992px) {
-    .headline h4 {
-    font-size: 26px;
-    }
     .headline .title p {
     font-size: 14px;
     }
@@ -101,10 +114,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .headline h4 {
-        font-size: 30px;
-    }
-    .headline .title p {
+    .headline .title p,.sub-banner .sub-banner-box .box-content p {
         font-size: 18px;
     }
     .card-top p {

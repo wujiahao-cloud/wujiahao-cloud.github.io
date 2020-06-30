@@ -286,13 +286,13 @@ input::-webkit-inner-spin-button{
     .c-container {
         width: 960px;
     }
-    .headline h4 {
+    .headline h4,.sub-banner .sub-banner-box .box-content h4 {
         font-size: 26px;
     }
     .headline .title p {
         font-size: 14px;
     }
-    .headline p {
+    .headline p,.sub-banner .sub-banner-box .box-content p {
         /*color: #a0a0a0;*/
         font-size: 16px;
     }
@@ -331,13 +331,13 @@ input::-webkit-inner-spin-button{
         width: 960px;
     }
 
-    .headline h4 {
+    .headline h4,.sub-banner .sub-banner-box .box-content h4 {
         font-size: 26px;
     }
     .headline .title p {
         font-size: 14px;
     }
-    .headline p {
+    .headline p,.sub-banner .sub-banner-box .box-content p {
         /*color: #a0a0a0;*/
         font-size: 16px;
     }
@@ -376,13 +376,13 @@ input::-webkit-inner-spin-button{
         width: 1140px;
     }
 
-    .headline h4 {
+    .headline h4 ,.sub-banner .sub-banner-box .box-content h4 {
         font-size: 30px;
     }
     .headline .title p {
         font-size: 18px;
     }
-    .headline p {
+    .headline p, .sub-banner .sub-banner-box .box-content p {
         /*color: #a0a0a0;*/
         font-size: 20px;
     }
