@@ -1,0 +1,28 @@
+.new {
+    color: #444;
+    display: block;
+
+}
+.new>div {
+    margin-top: 18px;
+}
+.new:hover {
+    color: #444;
+}
+.news-banner {
+    background-color: #f1f1f1;
+    height: 244px;
+}
+.title {
+    font-size: 20px;
+}
+.details {
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.date {
+    text-align: right;
+    color: #818181;
+}

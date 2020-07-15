@@ -2,11 +2,12 @@
     background: url("../img/cp_banner.png") no-repeat center center;
 }
 .img-box {
-    padding: 0 150px;
+    /*padding: 0 150px;.*/
 }
 .img-box img {
     display: block;
     margin: 0 auto;
+    width: 70%;
 }
 .card-box {
     display: flex;
@@ -91,6 +92,6 @@
         font-size: 20px;
         text-align: center;
     }
-    
+
 }
 

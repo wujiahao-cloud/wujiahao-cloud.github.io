@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>易通云 - 关于我们</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/aboutus.css">
+    <title>易通云 - 公司介绍</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/aboutus/profile.css">
 </head>
 <body>
 <div class="header">
@@ -15,22 +15,29 @@
             <h1>北京易通云网络技术有限责任公司</h1>
         </div>
         <div class="top-nav">
-            <ul>
-                <li class="nav-item"><a href="../index.html">首页</a></li>
-                <li class="nav-item"><a href="./products.html">产品</a></li>
-                <li class="nav-item"><a href="./solution.html">解决方案</a></li>
-                <li class="nav-item"><a href="javascript:void(0)">关于我们</a></li>
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">首页</a></li>
+                <li class="nav-item"><a class="nav-link" href="../products.html">产品</a></li>
+                <li class="nav-item"><a class="nav-link" href="../solution.html">解决方案</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">关于我们</a>
+                    <ul class="dropdown-list">
+                        <li class><a class="dropdown-link" href="javascript:void(0)">公司介绍</a></li>
+                        <li><a class="dropdown-link" href="./news/index.html">近期动态</a></li>
+                        <li><a class="dropdown-link" href="./join.html">加入我们</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
 </div>
 <div class="banner">
-    <div class="c-container">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 text-center">
                 <div class="banner-text">
                     <div class="title mb-3">
-                        关于我们
+                        公司介绍
                     </div>
                 </div>
             </div>
@@ -38,7 +45,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="c-container">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="headline section-title mb-5 pb-2">
@@ -53,7 +60,7 @@
             <p class="mb-4">易通云的研发团队分布在北京、上海、深圳、广州、南京、杭州和成都等地，其团队在企业IT云化转型、管理和运营大规模异构基础设施方面拥有丰富经验，客户覆盖金融、制造、能源、交通运输、电信、传媒、地产、互联网等行业。</p>
         </div>
         <div class="img-zone">
-            <img src="../img/gywm_picture.png" alt="">
+            <img src="../../img/gywm_picture.png" alt="">
         </div>
     </div>
 </div>
@@ -67,11 +74,11 @@
         </div>
     </div>
 </div>
-<script src="../js/jquery-3.4.1.min.js"></script>
-<script src="../js/common.js"></script>
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<script src="../../js/common.js"></script>
 <script>
     $(document).ready(function() {
-        $('.nav-item').eq(3).children().css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', 'bold')
+        $('.nav-item').eq(3).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', 'bold')
     })
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -80,7 +87,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-7621966-11');
 </script>
 </body>

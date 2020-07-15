@@ -16,17 +16,24 @@
             <h1>北京易通云网络技术有限责任公司</h1>
         </div>
         <div class="top-nav">
-            <ul>
-                <li class="nav-item"><a href="javascript:void(0)">首页</a></li>
-                <li class="nav-item"><a href="./html/products.html">产品</a></li>
-                <li class="nav-item"><a href="./html/solution.html">解决方案</a></li>
-                <li class="nav-item"><a href="./html/aboutus.html">关于我们</a></li>
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0)">首页</a></li>
+                <li class="nav-item"><a class="nav-link" href="./html/products.html">产品</a></li>
+                <li class="nav-item"><a class="nav-link" href="./html/solution.html">解决方案</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">关于我们</a>
+                    <ul class="dropdown-list">
+                        <li class><a class="dropdown-link" href="./html/aboutus/profile.html">公司介绍</a></li>
+                        <li><a class="dropdown-link" href="html/aboutus/news/index.html">近期动态</a></li>
+                        <li><a class="dropdown-link" href="./html/aboutus/join.html">加入我们</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
 </div>
 <div class="banner">
-    <div class="c-container">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 text-center">
                 <div class="banner-text">
@@ -43,7 +50,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="c-container">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="headline section-title mb-4 pb-2">
@@ -120,7 +127,7 @@
     </div>
 </div>
 <div class="section bg-dark-gray">
-    <div class="c-container">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="headline section-title mb-4 pb-2">
@@ -135,19 +142,17 @@
     </div>
 </div>
 <div class="section narrow sub-banner">
-    <div class="c-container justify-content-center row">
-        <div class="sub-banner-box">
-            <div class="box-content">
+    <div class="container">
+        <div class="sub-banner-box justify-content-center">
                 <h4 class="mb-4">GCMP高效管理多云环境</h4>
-                <p>基础架构TOC节省40%成本</p>
-                <p>IT资源利用率提高30%</p>
-                <p>服务请求响应速度提高50倍</p>
-            </div>
+                <p class="mb-1">基础架构TOC节省40%成本</p>
+                <p  class="mb-1">IT资源利用率提高30%</p>
+                <p  class="mb-1">服务请求响应速度提高50倍</p>
         </div>
     </div>
 </div>
 <div class="section narrow">
-    <div class="c-container">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="headline section-title mb-5 pb-2">
@@ -192,7 +197,7 @@
     </div>
 </div>
 <div class="footer">
-    <div class="c-container">
+    <div class="container">
         <div class="text-center">
             <p class="information mb-1">电话：010-63290293</p>
             <p class="information mb-1">邮箱：info@yunity.cn</p>
@@ -203,7 +208,7 @@
 </div>
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script src="./js/jquery.validate.min.js"></script>
-<script src="./js/smtp.js"></script>
+<!--<script src="./js/smtp.js"></script>-->
 <script src="./js/common.js"></script>
 <script src="./js/validate.js"></script>
 <script>

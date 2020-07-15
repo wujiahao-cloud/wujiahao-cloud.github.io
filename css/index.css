@@ -26,11 +26,11 @@
     background-color: #fff;
 }
 .card-top p {
-     font-size: 30px;
+     font-size: 22px;
      color: #444444;
  }
 .card-top h5,.card-bottom p {
-    font-size: 20px;
+    font-size: 12px;
     color: #444444;
 }
 .card-bottom {
@@ -56,23 +56,40 @@
 .displaybox {
     display: inline-block;
 }
-.sub-banner .sub-banner-box .box-content {
+.sub-banner .sub-banner-box {
+    width: 50%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 50px;
     background-color: rgba(0,0,0,.5);
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
 }
+.sub-banner-box h4 {
+    font-size: 20px;
+}
+.sub-banner-box p {
+    font-size: 12px;
+}
+/*.sub-banner .sub-banner-box .box-content {*/
+/*    margin: 0 auto;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    padding: 40px 50px;*/
+
+/*}*/
+
 
 
 
 @media (min-width: 768px) {
-    .banner-text .slogan {
-    font-size: 38px;
-    }
+    /*.banner-text .slogan {*/
+    /*font-size: 38px;*/
+    /*}*/
     .banner-text .learn-more a {
     font-size: 16px;
     }
@@ -83,7 +100,7 @@
         font-size: 22px;
     }
     .card-top h5, .card-bottom p {
-        font-size: 14px;
+        font-size: 12px;
     }
     .card-box {
         display: flex;
@@ -91,6 +108,12 @@
     }
     .card-div {
         width: 20%;
+    }
+    .sub-banner-box h4 {
+        font-size: 20px;
+    }
+    .sub-banner-box p {
+        font-size: 12px;
     }
 }
 
@@ -111,6 +134,12 @@
     .card-div {
         width: 20%;
     }
+    .sub-banner-box h4 {
+        font-size: 22px;
+    }
+    .sub-banner-box p {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -121,6 +150,12 @@
         font-size: 24px;
     }
     .card-top h5,.card-bottom p {
+        font-size: 16px;
+    }
+    .sub-banner-box h4 {
+        font-size: 24px;
+    }
+    .sub-banner-box p {
         font-size: 16px;
     }
 }

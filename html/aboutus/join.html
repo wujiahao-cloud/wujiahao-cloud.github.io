@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>易通云 - 加入我们</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/aboutus/join.css">
+</head>
+<body>
+<div class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>北京易通云网络技术有限责任公司</h1>
+        </div>
+        <div class="top-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">首页</a></li>
+                <li class="nav-item"><a class="nav-link" href="../products.html">产品</a></li>
+                <li class="nav-item"><a class="nav-link" href="../solution.html">解决方案</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">关于我们</a>
+                    <ul class="dropdown-list">
+                        <li class><a class="dropdown-link" href="./profile.html">公司介绍</a></li>
+                        <li><a class="dropdown-link" href="news/index.html">近期动态</a></li>
+                        <li><a class="dropdown-link" href="javascript:void(0)">加入我们</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="section mgt-60 mgb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="headline section-title mb-5 pb-2">
+                    <h4 class="title mb-4">加入我们</h4>
+                </div>
+            </div>
+        </div>
+        <div class="switch-box">
+            <div class="switch mb-4">
+                <ul class="nav nav-tabs switch-title">
+                    <li role="presentation" class="active"><a href="#menu1" class="switch-link" data-toggle="tab">产品研发类</a></li>
+                    <li role="presentation"><a href="#menu2" class="switch-link" data-toggle="tab">技术支持类</a></li>
+                    <li role="presentation"><a href="#menu3" class="switch-link" data-toggle="tab">销售类</a></li>
+                    <li role="presentation"><a href="#menu4" class="switch-link" data-toggle="tab">实习生</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="menu1" class=" tab-pane active">
+                    <table id="table1" class="table table-hover"></table>
+                </div>
+                <div id="menu2" class=" tab-pane ">
+                    <table id="table2" class="table table-hover"></table>
+                </div>
+                <div id="menu3" class=" tab-pane">
+                    <table id="table3" class="table table-hover"></table>
+                </div>
+                <div id="menu4" class=" tab-pane">
+                    <table id="table4" class="table table-hover"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="headline section-title mb-5 pb-2">
+                    <h4 class="title mb-4">招聘流程</h4>
+                </div>
+            </div>
+        </div>
+        <div class="process">
+            <div class="process-item">
+                <div class="number text-center mb-2">①</div>
+                <div class="title text-center mb-2">简历投递</div>
+                <div class="detail">发送个人简历到:hr@yunion.cn，如果邮件正文有简单的自我介绍和求职信 就更好了</div>
+            </div>
+            <div class="process-item">
+                <div class="number text-center mb-2">②</div>
+                <div class="title text-center mb-2">邀约面试</div>
+                <div class="detail">2个工作日内，完成简历筛选，安排面试，进入面试环节。</div>
+            </div>
+            <div class="process-item">
+                <div class="number text-center mb-2">③</div>
+                <div class="title text-center mb-2">签约入职</div>
+                <div class="detail">面试通过后，签订合同，正式入职</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="text-center">
+            <p class="information mb-1">电话：010-63290293</p>
+            <p class="information mb-1">邮箱：info@yunity.cn</p>
+            <p class="information mb-1">京ICP备1102390920号</p>
+            <p class="information mb-1">2014-2020 版权所有&copy;北京易通云网络技术有限责任公司</p>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap-table.min.js"></script>
+<!--<script src="../../js/common.js"></script>-->
+<script>
+    $(document).ready(function() {
+        $('.nav-item').eq(3).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', 'bold')
+        $('.header').css('background-color', 'rgb(11, 11, 11)')
+        $('#table1').bootstrapTable({
+            columns: [{
+                field: 'position',
+                title: '职位'
+            }, {
+                field: 'type',
+                title: '类型'
+            }, {
+                field: 'workplace',
+                title: '工作地点'
+            },{
+                field: 'date',
+                title: '发布日期'
+            }
+            ],
+            data: [{
+                id: 1,
+                position: '容器研发工程师',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 2,
+                position: 'Go语言业务开发工程师',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 3,
+                position: '高级前端工程师',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 4,
+                position: '测试工程师',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            },{
+                id: 5,
+                position: '产品经理',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 6,
+                position: '网络研发工程师',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }]
+        })
+        $('#table2').bootstrapTable({
+            columns: [{
+                field: 'position',
+                title: '职位'
+            }, {
+                field: 'type',
+                title: '类型'
+            }, {
+                field: 'workplace',
+                title: '工作地点'
+            },{
+                field: 'date',
+                title: '发布日期'
+            }
+            ],
+            data: [{
+                id: 1,
+                position: '技术支持工程师-售后',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 2,
+                position: '售前方案工程师',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }]
+        })
+        $('#table3').bootstrapTable({
+            columns: [{
+                field: 'position',
+                title: '职位'
+            }, {
+                field: 'type',
+                title: '类型'
+            }, {
+                field: 'workplace',
+                title: '工作地点'
+            },{
+                field: 'date',
+                title: '发布日期'
+            }
+            ],
+            data: [{
+                id: 1,
+                position: '云计算销售总监',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 2,
+                position: '行业销售经理',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 3,
+                position: '市场专员',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 4,
+                position: '制造业行业销售经理/总监',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }]
+        })
+        $('#table4').bootstrapTable({
+            columns: [{
+                field: 'position',
+                title: '职位'
+            }, {
+                field: 'type',
+                title: '类型'
+            }, {
+                field: 'workplace',
+                title: '工作地点'
+            },{
+                field: 'date',
+                title: '发布日期'
+            }
+            ],
+            data: [{
+                id: 1,
+                position: 'UI设计实习生',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }, {
+                id: 2,
+                position: '测试实习生',
+                type: '全职',
+                workplace:'北京',
+                date: '2020-07-13发布'
+            }]
+        })
+    })
+    $('.switch-item').click(function() {
+        if ($(this).prop('class').includes('click')) {
+            return;
+        } else {
+            $('.switch-item').eq($(this).index()).stop().addClass('click').siblings().removeClass('click').css('transition', 'all linear .3s 0s')
+            $(".switch-content").eq($(this).index()).addClass('click').siblings().removeClass('click')
+            $(".switch-content").fadeOut(0).eq($(this).index()).fadeIn(300)
+        }
+    })
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7621966-11"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-7621966-11');
+</script>
+</body>
+</html>

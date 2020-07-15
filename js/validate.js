@@ -1,3 +1,16 @@
+$.prototype.serializeObject = function() {
+    var a, o, h, i, e;
+    a = this.serializeArray();
+    o = {};
+    h = o.hasOwnProperty;
+    for (i = 0; i < a.length; i++) {
+        e = a[i];
+        if (!h.call(o, e.name)) {
+            o[e.name] = e.value;
+        }
+    }
+    return o;
+};
 jQuery.validator.addMethod("required2", function(value, element, param) {
     //fff
         value = value.trim();
@@ -21,7 +34,7 @@ jQuery.validator.addMethod("required2", function(value, element, param) {
     jQuery.validator.addMethod("email", function(value, element, param) {
             return this.optional(element) || /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(value);
         }, $.validator.format("请输入正确的邮箱"));
-    
+
 function validate() {
     return $('#contactForm').validate({
         rules: {
@@ -57,17 +70,19 @@ function validate() {
 
 $("#submitBtn").click(function(){
     if (validate().form()) {
-        Email.send({
-            SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-            To : 'them@website.com',
-            From : "you@isp.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-       alert('提交成功，感谢您的使用。')
+        let params = $('#contactForm').serialize().replace(/&/g,"\\n\\n").replace(/=/g, ':')
+        console.log('{"text":' + params + '}')
+        // $.post(
+        //     'http://10.8.5.198:8083/mail/sendmail',
+        //     params,
+        //     function(res) {
+        //         console.log(res)
+        //     },
+        //     'json'
+        // )
+       // alert('提交成功，感谢您的使用。')
     }else{
-        console.log('e')
+        console.log(e)
     }
 });
+

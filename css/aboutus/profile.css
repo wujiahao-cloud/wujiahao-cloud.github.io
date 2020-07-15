@@ -1,11 +1,11 @@
 .banner {
-    background: url("../img/gywm_banner.png") no-repeat center center;
+    background: url("../../img/gywm_banner.png") no-repeat center center;
 }
 .c-container {
     padding: 0 100px;
 }
 .section .content p {
-    font-size: 20px;
+    font-size: 16px;
 }
 .img-zone {
     margin: 0 auto;
