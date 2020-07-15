@@ -71,18 +71,17 @@ function validate() {
 $("#submitBtn").click(function(){
     if (validate().form()) {
         let params = $('#contactForm').serialize().replace(/&/g,"\\n\\n").replace(/=/g, ':')
-        console.log('{"text":' + params + '}')
-        // $.post(
-        //     'http://10.8.5.198:8083/mail/sendmail',
-        //     params,
-        //     function(res) {
-        //         console.log(res)
-        //     },
-        //     'json'
-        // )
-       // alert('提交成功，感谢您的使用。')
+        let data = '{"text":' + params + '}'
+        $.post(
+            '/mail/sendmail',
+            data,
+            function(res) {
+                console.log(res)
+            },
+            'json'
+        )
+       alert('提交成功，感谢您的使用。')
     }else{
-        console.log(e)
     }
 });
 
