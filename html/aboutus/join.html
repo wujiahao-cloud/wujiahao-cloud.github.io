@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>易通云 - 加入我们</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/aboutus/join.css">
@@ -52,16 +52,60 @@
             </div>
             <div class="tab-content">
                 <div id="menu1" class=" tab-pane active">
-                    <table  data-detail-view="true" data-detail-formatter="treeDetail" id="table1" class="table table-hover"></table>
+                    <table id="table1" class="table table-hover" style="width: 100%;">
+                        <thead>
+                        <tr>
+                            <th style="width:50%"></th>
+                            <th style="width:15%"></th>
+                            <th style="width:15%"></th>
+                            <th style="width:20%"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
                 <div id="menu2" class=" tab-pane ">
-                    <table id="table2" class="table table-hover"></table>
+                    <table id="table2" class="table table-hover table-full-width" style="width: 100%;">
+                        <thead>
+                        <tr>
+                            <th style="width:50%"></th>
+                            <th style="width:15%"></th>
+                            <th style="width:15%"></th>
+                            <th style="width:20%"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
                 <div id="menu3" class=" tab-pane">
-                    <table id="table3" class="table table-hover"></table>
+                    <table id="table3" class="table table-hover table-full-width" style="width: 100%;">
+                        <thead>
+                        <tr>
+                            <th style="width:50%"></th>
+                            <th style="width:15%"></th>
+                            <th style="width:15%"></th>
+                            <th style="width:20%"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
                 <div id="menu4" class=" tab-pane">
-                    <table id="table4" class="table table-hover"></table>
+                    <table id="table4" class="table table-hover table-full-width" style="width: 100%;">
+                        <thead>
+                        <tr>
+                            <th style="width:50%"></th>
+                            <th style="width:15%"></th>
+                            <th style="width:15%"></th>
+                            <th style="width:20%"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -138,165 +182,88 @@
 </div>
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/bootstrap-table.min.js"></script>
+<script src="../../js/jquery.dataTables.min.js"></script>
 <!--<script src="../../js/common.js"></script>-->
 <script>
+    function getTableData(domId, type) {
+        var oTable;
+        let $table = $(domId);
+        let tableData = []
+        $.ajax({
+            url: '/data/'+ type +'.json',
+            type: 'get',
+            success: function(data) {
+                if (data.data.length !== 0) {
+                            data.data.forEach(function(item, index) {
+                                tableData.push([item.position, item.type, item.workplace, item.date])
+                            })
+                        }
+                        oTable = $table.dataTable({
+                            "aoColumnDefs": [{
+                                //设置第一列不排序
+                                "bSortable": false,
+                                "aTargets": [0]
+                            }],
+                            "aaData": tableData,
+                            "fnCreatedRow": function(nRow, aData, iDataIndex) {
+                        $('td:eq(0)', nRow).attr('data_id', aData[0])
+                    },
+                    "paging":   false,
+                    "ordering": false,
+                    "info": false,
+                    "bFilter": false
+                })
+                $table.on('click', ' tbody td ',
+                    function() {
+                        console.log(1)
+                        var nTr = $(this).parents('tr')[0];
+                        if (oTable.fnIsOpen(nTr)) //判断是否已打开
+                        {
+                            /* This row is already open - close it */
+                            $(this).addClass("row-details-close").removeClass("row-details-open");
+                            oTable.fnClose(nTr);
+                        } else {
+                            /* Open this row */
+                            $(this).addClass("row-details-open").removeClass("row-details-close");
+                            //  alert($(this).attr("data_id"));
+                            //oTable.fnOpen( nTr,
+                            // 调用方法显示详细信息 data_id为自定义属性 存放配置ID
+                            console.log($(this))
+                            var array = data.data;
+                            for (var i = 0; i < array.length; i++) {
+                                if ($(this).attr("data_id") === array[i].position) {
+                                    var sOut = '<p style="width:70%;" class="mb-3">' + array[i].detail + '</p style="width:70%">' + array[i].requirement + '</p>';
+                                    oTable.fnOpen(nTr, sOut, 'details');
+                                }
+                            }
+                        }
+                    });
+            }
+
+        })
+
+    }
+    var oTable;
     $(document).ready(function() {
+        getTableData('#table1', 'development')
+        getTableData('#table2', 'support')
+        getTableData('#table3', 'sale')
+        getTableData('#table4', 'trainee')
+
         $('.nav-item').eq(3).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', 'bold')
         $('.header').css('background-color', 'rgb(11, 11, 11)')
-        $('#table1').bootstrapTable({
-            columns: [{
-                field: 'position',
-                title: '职位'
-            }, {
-                field: 'type',
-                title: '类型'
-            }, {
-                field: 'workplace',
-                title: '工作地点'
-            },{
-                field: 'date',
-                title: '发布日期'
-            }
-            ],
-            data: [{
-                id: 1,
-                position: '容器研发工程师',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 2,
-                position: 'Go语言业务开发工程师',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 3,
-                position: '高级前端工程师',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 4,
-                position: '测试工程师',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            },{
-                id: 5,
-                position: '产品经理',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 6,
-                position: '网络研发工程师',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }]
-        })
-        $('#table2').bootstrapTable({
-            columns: [{
-                field: 'position',
-                title: '职位'
-            }, {
-                field: 'type',
-                title: '类型'
-            }, {
-                field: 'workplace',
-                title: '工作地点'
-            },{
-                field: 'date',
-                title: '发布日期'
-            }
-            ],
-            data: [{
-                id: 1,
-                position: '技术支持工程师-售后',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 2,
-                position: '售前方案工程师',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }]
-        })
-        $('#table3').bootstrapTable({
-            columns: [{
-                field: 'position',
-                title: '职位'
-            }, {
-                field: 'type',
-                title: '类型'
-            }, {
-                field: 'workplace',
-                title: '工作地点'
-            },{
-                field: 'date',
-                title: '发布日期'
-            }
-            ],
-            data: [{
-                id: 1,
-                position: '云计算销售总监',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 2,
-                position: '行业销售经理',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 3,
-                position: '市场专员',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 4,
-                position: '制造业行业销售经理/总监',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }]
-        })
-        $('#table4').bootstrapTable({
-            columns: [{
-                field: 'position',
-                title: '职位'
-            }, {
-                field: 'type',
-                title: '类型'
-            }, {
-                field: 'workplace',
-                title: '工作地点'
-            },{
-                field: 'date',
-                title: '发布日期'
-            }
-            ],
-            data: [{
-                id: 1,
-                position: 'UI设计实习生',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }, {
-                id: 2,
-                position: '测试实习生',
-                type: '全职',
-                workplace:'北京',
-                date: '2020-07-13发布'
-            }]
-        })
-    })
+
+        // oTable = $("#table1").dataTable({
+        //     "aoColumnDefs": [{
+        //         //设置第一列不排序
+        //         "bSortable": false,
+        //         "aTargets": [0]
+        //     }],
+        //     //"aaSorting": [[1, 'asc']],//排序
+        //
+        // });
+
+    });
     $('.switch-item').click(function() {
         if ($(this).prop('class').includes('click')) {
             return;
@@ -304,6 +271,7 @@
             $('.switch-item').eq($(this).index()).stop().addClass('click').siblings().removeClass('click').css('transition', 'all linear .3s 0s')
             $(".switch-content").eq($(this).index()).addClass('click').siblings().removeClass('click')
             $(".switch-content").fadeOut(0).eq($(this).index()).fadeIn(300)
+            console.log(12)
         }
     })
 </script>
