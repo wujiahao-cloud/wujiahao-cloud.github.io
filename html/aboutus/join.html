@@ -215,7 +215,7 @@
                 })
                 $table.on('click', ' tbody tr',
                     function() {
-                        var nTr = $(this).parents('tr')[0];
+                        var nTr = $(this);
                         if (oTable.fnIsOpen(nTr)) //判断是否已打开
                         {
                             /* This row is already open - close it */
