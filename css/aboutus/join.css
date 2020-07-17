@@ -25,6 +25,9 @@
 #table1 thead,#table2 thead,#table3 thead,#table4 thead {
     display: none !important;
 }
+table tr {
+    cursor: pointer;
+}
 
 .process {
     display: flex;

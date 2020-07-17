@@ -190,7 +190,7 @@
         let $table = $(domId);
         let tableData = []
         $.ajax({
-            url: '/data/'+ type +'.json',
+            url: '/official website/data/'+ type +'.json',
             type: 'get',
             success: function(data) {
                 if (data.data.length !== 0) {
@@ -206,16 +206,15 @@
                             }],
                             "aaData": tableData,
                             "fnCreatedRow": function(nRow, aData, iDataIndex) {
-                        $('td:eq(0)', nRow).attr('data_id', aData[0])
+                        $(nRow).attr('data_id', aData[0])
                     },
                     "paging":   false,
                     "ordering": false,
                     "info": false,
                     "bFilter": false
                 })
-                $table.on('click', ' tbody td ',
+                $table.on('click', ' tbody tr',
                     function() {
-                        console.log(1)
                         var nTr = $(this).parents('tr')[0];
                         if (oTable.fnIsOpen(nTr)) //判断是否已打开
                         {
@@ -228,7 +227,6 @@
                             //  alert($(this).attr("data_id"));
                             //oTable.fnOpen( nTr,
                             // 调用方法显示详细信息 data_id为自定义属性 存放配置ID
-                            console.log($(this))
                             var array = data.data;
                             for (var i = 0; i < array.length; i++) {
                                 if ($(this).attr("data_id") === array[i].position) {
@@ -271,7 +269,6 @@
             $('.switch-item').eq($(this).index()).stop().addClass('click').siblings().removeClass('click').css('transition', 'all linear .3s 0s')
             $(".switch-content").eq($(this).index()).addClass('click').siblings().removeClass('click')
             $(".switch-content").fadeOut(0).eq($(this).index()).fadeIn(300)
-            console.log(12)
         }
     })
 </script>
