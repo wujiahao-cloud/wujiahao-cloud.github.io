@@ -13,27 +13,27 @@ $.prototype.serializeObject = function() {
 };
 jQuery.validator.addMethod("required2", function(value, element, param) {
     //fff
-        value = value.trim();
-        // check if dependency is met
-        if ( !this.depend( param, element ) ) {
-            return "dependency-mismatch";
-        }
-        if ( element.nodeName.toLowerCase() === "select" ) {
-            // could be an array for select-multiple or a string, both are fine this way
-            var val = $( element ).val();
-            return val && val.length > 0;
-        }
-        if ( this.checkable( element ) ) {
-            return this.getLength( value, element ) > 0;
-        }
-        return value.length > 0;
-    });
-    jQuery.validator.addMethod("phone", function(value, element, param) {
-            return this.optional(element) || /^1[34578]\d{9}$/.test(value);
-        }, $.validator.format("请输入正确的手机号"));
-    jQuery.validator.addMethod("email", function(value, element, param) {
-            return this.optional(element) || /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(value);
-        }, $.validator.format("请输入正确的邮箱"));
+    value = value.trim();
+    // check if dependency is met
+    if ( !this.depend( param, element ) ) {
+        return "dependency-mismatch";
+    }
+    if ( element.nodeName.toLowerCase() === "select" ) {
+        // could be an array for select-multiple or a string, both are fine this way
+        var val = $( element ).val();
+        return val && val.length > 0;
+    }
+    if ( this.checkable( element ) ) {
+        return this.getLength( value, element ) > 0;
+    }
+    return value.length > 0;
+});
+jQuery.validator.addMethod("phone", function(value, element, param) {
+    return this.optional(element) || /^1[34578]\d{9}$/.test(value);
+}, $.validator.format("请输入正确的手机号"));
+jQuery.validator.addMethod("email", function(value, element, param) {
+    return this.optional(element) || /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(value);
+}, $.validator.format("请输入正确的邮箱"));
 
 function validate() {
     return $('#contactForm').validate({
@@ -67,21 +67,39 @@ function validate() {
         }
     })
 }
-
+let lock = false;
 $("#submitBtn").click(function(){
+
     if (validate().form()) {
-        let params = $('#contactForm').serialize().replace(/&/g,"\\n\\n").replace(/=/g, ':')
-        let data = '{"text":' + params + '}'
-        $.post(
-            '/mail/sendmail',
-            data,
-            function(res) {
-                console.log(res)
-            },
-            'json'
-        )
-       alert('提交成功，感谢您的使用。')
+        if (lock === false) {
+            lock = true;
+            let params =  ''
+            for (item in $('#contactForm').serializeObject()) {
+                params += item + ':' +  $('#contactForm').serializeObject()[item] + "\n\n"
+            }
+            let  obj = {
+                text: params
+            }
+            $.ajax({
+                url: "http://10.8.3.210:8099/mail/sendmail",
+                type : "post",
+                contentType:'application/json;charset=utf-8',
+                data: JSON.stringify(obj),
+                success : function(data) {
+                    if (data.retBean.indexOf('Queued. Thank you.') !== -1) {
+                        lock = false;
+                        alert('提交成功，感谢您的使用。')
+                    } else {
+                        lock = false;
+                        alert('网络错误，请重试！')
+                    }
+                }
+            });
+        } else {
+            alert('操作过于频繁，请稍后再试。')
+        }
     }else{
+        return;
     }
 });
 
