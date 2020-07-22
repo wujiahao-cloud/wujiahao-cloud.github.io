@@ -86,7 +86,7 @@ $("#submitBtn").click(function(){
                 type : "post",
                 contentType:'application/json',
                 data: JSON.stringify(obj),
-                dataType: "json",
+                dataType: "text json",
                 success : function(res) {
                     console.log(res)
                     if (res.result) {
