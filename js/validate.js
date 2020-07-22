@@ -96,6 +96,9 @@ $("#submitBtn").click(function(){
                         lock = false;
                         alert('网络错误，请重试！')
                     }
+                },
+                error: function(res) {
+                    console.log(res)
                 }
             });
         } else {
