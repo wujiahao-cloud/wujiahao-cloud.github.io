@@ -88,8 +88,7 @@ $("#submitBtn").click(function(){
                 data: JSON.stringify(obj),
                 dataType: "text",
                 success : function(res) {
-                    console.log(res)
-                    if (res.result) {
+                    if (JSON.parse(res).result) {
                         lock = false;
                         alert('提交成功，感谢您的使用。')
                     } else {
