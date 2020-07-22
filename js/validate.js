@@ -69,7 +69,6 @@ function validate() {
 }
 let lock = false;
 $("#submitBtn").click(function(){
-
     if (validate().form()) {
         if (lock === false) {
             lock = true;
@@ -81,6 +80,7 @@ $("#submitBtn").click(function(){
                     subject: '用户咨询',
                     text: params
             }
+            console.log(333)
             $.ajax({
                 url: "https://v9je2ogir6.execute-api.ap-northeast-1.amazonaws.com/v1/email",
                 type : "post",
