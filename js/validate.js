@@ -78,15 +78,18 @@ $("#submitBtn").click(function(){
                 params += item + ':' +  $('#contactForm').serializeObject()[item] + "\n\n"
             }
             let  obj = {
-                text: params
+                body: {
+                    subject: '用户咨询',
+                    text: params
+                }
             }
             $.ajax({
-                url: "http://10.8.3.210:8099/mail/sendmail",
+                url: "https://v9je2ogir6.execute-api.ap-northeast-1.amazonaws.com/v1/email",
                 type : "post",
-                contentType:'application/json;charset=utf-8',
+                contentType:'text/plain',
                 data: JSON.stringify(obj),
-                success : function(data) {
-                    if (data.retBean.indexOf('Queued. Thank you.') !== -1) {
+                success : function(res) {
+                    if (res.error === 0) {
                         lock = false;
                         alert('提交成功，感谢您的使用。')
                     } else {
