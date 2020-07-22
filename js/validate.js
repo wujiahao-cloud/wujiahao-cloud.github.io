@@ -89,7 +89,7 @@ $("#submitBtn").click(function(){
                 contentType:'text/plain',
                 data: JSON.stringify(obj),
                 success : function(res) {
-                    if (res.error === 0) {
+                    if (res.result === {}) {
                         lock = false;
                         alert('提交成功，感谢您的使用。')
                     } else {
