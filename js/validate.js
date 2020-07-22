@@ -78,12 +78,9 @@ $("#submitBtn").click(function(){
                 params += item + ':' +  $('#contactForm').serializeObject()[item] + "\n\n"
             }
             let  obj = {
-                body: {
                     subject: '用户咨询',
                     text: params
-                }
             }
-            console.log(JSON.stringify(obj))
             $.ajax({
                 url: "https://v9je2ogir6.execute-api.ap-northeast-1.amazonaws.com/v1/email",
                 type : "post",
