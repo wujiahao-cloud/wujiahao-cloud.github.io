@@ -84,7 +84,7 @@ $("#submitBtn").click(function(){
             $.ajax({
                 url: "https://v9je2ogir6.execute-api.ap-northeast-1.amazonaws.com/v1/email",
                 type : "post",
-                contentType:'text/plain',
+                contentType:'application/json',
                 data: JSON.stringify(obj),
                 success : function(res) {
                     console.log(res)
