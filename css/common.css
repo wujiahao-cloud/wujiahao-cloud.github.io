@@ -43,7 +43,12 @@ input::-webkit-inner-spin-button{
     height: 100%;
 }
 .header .header-container .logo {
-    /*width: 70%;*/
+    height: 100%;
+}
+.header .header-container .logo img {
+    display: block;
+    height: 100%;
+
 }
 .header .header-container .logo h1 {
     font-size: 16px;
