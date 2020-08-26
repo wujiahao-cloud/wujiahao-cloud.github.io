@@ -111,7 +111,7 @@ input::-webkit-inner-spin-button{
     box-shadow: 0 0.125rem 0.75rem 0 rgba(0,0,0,.1);
 }
 .header .header-container .top-nav .nav-list .nav-item:hover .dropdown-list {
-    height: 200px;
+    /*height: 200px;*/
 }
 .header .dropdown-list .dropdown-link {
     display: flex;

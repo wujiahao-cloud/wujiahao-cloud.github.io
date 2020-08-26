@@ -12,3 +12,15 @@ $(document).scroll(function() {
         $('.header').css('transition', 'background-color linear .3s 0s')
     }
 });
+
+$('.nav-item').eq(3).hover(function () {
+    $('.nav-item').eq(3).children().eq(1).css('height','200px')
+},function () {
+    $('.nav-item').eq(3).children().eq(1).css('height','0px')
+})
+
+$('.nav-item').eq(4).hover(function () {
+    $('.nav-item').eq(4).children().eq(1).css('height','150px')
+},function () {
+    $('.nav-item').eq(4).children().eq(1).css('height','0px')
+})
