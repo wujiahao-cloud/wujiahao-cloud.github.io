@@ -17,3 +17,152 @@
 .banner-text .learn-more a{
     color: white;
 }
+
+.card {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-top: 5px solid #acb5bd !important;
+}
+.card-top {
+    padding:10px 0px;
+    background-color: #fff;
+}
+.card-top p {
+    font-size: 22px;
+    color: #444444;
+}
+.card-top h5,.card-bottom p {
+    color: #444444;
+}
+.card-bottom {
+    background-color: #f8f9fc;
+    padding: 10px 30px 20px;
+}
+.card-box {
+    display: flex;
+    justify-content: space-between;
+}
+.card-div {
+    width: 30%;
+}
+.card-bottom p{
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: left;
+}
+.card-div:nth-of-type(1) .card .card-bottom{
+    padding-left: 110px;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 992px){
+    .card-bottom{
+        padding: 10px 20px 20px;
+        min-height: 350px;
+    }
+    .card-bottom p {
+        font-size: 10px;
+    }
+    .card-div {
+        width: 30%;
+    }
+    .card-div:nth-of-type(1) .card .card-bottom{
+        padding-left: 60px;
+    }
+}
+
+@media (min-width: 992px) {
+    .banner {
+        height: 440px;
+    }
+    .banner-text .slogan,.banner-text .title {
+        font-size: 38px;
+    }
+    .banner-text .learn-more a,.banner-text .describe {
+        font-size: 16px;
+    }
+    .c-container {
+        width: 960px;
+    }
+
+    .headline h4,.sub-banner .sub-banner-box .box-content h4 {
+        font-size: 26px;
+    }
+    .headline .title p {
+        font-size: 14px;
+    }
+    .headline p,.sub-banner .sub-banner-box .box-content p {
+        /*color: #a0a0a0;*/
+        font-size: 16px;
+    }
+    .card-top p {
+        font-size: 22px;
+    }
+    .card-top h5 {
+        font-size: 16px;
+    }
+    .card-bottom{
+        min-height: 330px;
+    }
+    .card-bottom p {
+        /*font-size: 12px;*/
+    }
+    .card-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-div {
+        width: 30%;
+    }
+    .card-div:nth-of-type(1) .card .card-bottom{
+        padding-left: 90px;
+    }
+    #contactForm ul li > * {
+        display: block;
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    .banner {
+        height: 510px;
+    }
+    .banner-text .slogan,.banner-text .title {
+        font-size: 44px;
+    }
+    .banner-text .learn-more a,.banner-text .describe {
+        font-size: 18px;
+    }
+    .c-container {
+        width: 1140px;
+    }
+
+    .headline h4 ,.sub-banner .sub-banner-box .box-content h4 {
+        font-size: 30px;
+    }
+    .headline .title p {
+        font-size: 18px;
+    }
+    .headline p, .sub-banner .sub-banner-box .box-content p {
+        /*color: #a0a0a0;*/
+        font-size: 20px;
+    }
+    .card-top p {
+        font-size: 24px;
+    }
+    .card-top h5 {
+        font-size: 18px;
+    }
+
+    .card-bottom p {
+        font-size: 16px;
+    }
+    #contactForm ul li > * {
+        display: block;
+        font-size: 16px;
+    }
+    .card-div {
+        width: 30%;
+    }
+}
