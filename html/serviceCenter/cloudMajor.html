@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>易通云 - 公司介绍</title>
+    <title>易通云管平台</title>
     <meta name="description" content="易通云专注于为企业提供多云管理服务，凭借先进的理念与领先的技术，帮助企业实现数字化转型。">
     <meta name="keywords" content="云管平台,多云管理平台,云管理平台,CMP,混合云管理,混合云管理平台,私有云管理,混合云解决方案,私有云解决方案">
     <meta name="author" content="北京易通云网络技术有限公司" >
     <meta name="email" content="info@yunity.cn" >
     <meta name="website" content="http://www.yunity.cn" >
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/aboutus/profile.css">
+    <link rel="stylesheet" href="../../css/serviceCenter/cloudMajor.css">
 </head>
 <body>
 <header class="header">
     <div class="header-container">
         <div class="logo">
-<!--            <h1>北京易通云网络技术有限公司</h1>-->
+            <!--            <h1>北京易通云网络技术有限公司</h1>-->
             <img src="../../img/logo.png" alt="">
         </div>
         <div class="top-nav">
@@ -28,7 +29,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0)">服务中心</a>
                     <ul class="dropdown-list">
-                        <li class><a class="dropdown-link" href="../../html/serviceCenter/cloudMajor.html">云化专业服务</a></li>
+                        <li class><a class="dropdown-link" href="javascript:void(0)">云化专业服务</a></li>
                         <li><a class="dropdown-link" href="../../html/serviceCenter/devOps.html">运维管理服务</a></li>
                         <li><a class="dropdown-link" href="../../html/serviceCenter/monitor.html">监控管理服务</a></li>
                         <li><a class="dropdown-link" href="../../html/serviceCenter/cloudOrigin.html">云原生应用开发</a></li>
@@ -37,7 +38,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0)">关于我们</a>
                     <ul class="dropdown-list">
-                        <li class><a class="dropdown-link" href="javascript:void(0)">公司介绍</a></li>
+                        <li class><a class="dropdown-link" href="/html/aboutus/profile.html">公司介绍</a></li>
                         <li><a class="dropdown-link" href="/html/aboutus/news/index.html">近期动态</a></li>
                         <li><a class="dropdown-link" href="/html/aboutus/join.html">加入我们</a></li>
                     </ul>
@@ -51,31 +52,97 @@
         <div class="row justify-content-center">
             <div class="col-lg-12 text-center">
                 <div class="banner-text">
-                    <div class="title mb-3">
-                        公司介绍
+                    <div class="slogan mb-3">
+                        云化专业服务
+                    </div>
+                    <div class="learn-more">
+                        <a href="contact.html">立即咨询&nbsp;&nbsp;<span class="gl"></span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="section">
+<div class="section" id="frame">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" >
             <div class="col-12 text-center">
                 <div class="headline section-title mb-5 pb-2">
-                    <h4 class="title mb-4">关于易通云</h4>
+                    <h4 class="title mb-4">打造一站式云化转型体验</h4>
+                    <p class="text-muted mb-0 mx-auto">洞察业务现状及需求量身定制云上架构，迁移及实施服务助力企业转型落地</p>
                 </div>
             </div>
         </div>
-        <div class="content">
-            <p class="mb-4">易通云是多云时代技术领先的企业级软件提供商。</p>
-            <p class="mb-4">易通云致力于帮助企业在多云时代更好的构建、运行、管理和保护其IT基础设施和应用，实现数字化转型的目标。</p>
-            <p class="mb-4">易通云的产品与解决方案涵盖以下四个领域：企业级DevOps、云原生运行时、多云管理及安全合规。</p>
-            <p class="mb-4">易通云的研发团队分布在北京、上海、深圳、广州、南京、杭州和成都等地，其团队在企业IT云化转型、管理和运营大规模异构基础设施方面拥有丰富经验，客户覆盖金融、制造、能源、交通运输、电信、传媒、地产、互联网等行业。</p>
+        <div class="img-box">
+            <img src="../../img/fw_picture1.png" alt="">
         </div>
-        <div class="img-zone">
-            <img src="../../img/gywm_picture.png" alt="">
+    </div>
+</div>
+<div class="section bg-dark-gray" id="functions">
+    <div class="container">
+        <div class="row justify-content-center" >
+            <div class="col-12 text-center">
+                <div class="headline section-title mb-5 pb-2">
+                    <h4 class="title mb-4">量身定制云上解决方案</h4>
+                    <p class="text-muted mb-0 mx-auto">洞察业务现状及需求量身定制云上架构，迁移及实施服务助力企业转型落地</p>
+                </div>
+            </div>
+        </div>
+        <div class="align-items-center card-box">
+            <div class="card-div">
+                <div class="card explore-feature pro-ms border-0 shadow">
+                    <a href="javascript:void(0)">
+                        <div class="card-top text-center">
+                            <h5>咨询规划</h5>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <p class="mb-2">1.云化战略咨询</p>
+                            <p class="mb-2">2.IT规划咨询</p>
+                            <p class="mb-2">3.云迁移咨询</p>
+                            <p class="mb-2">4.云安全咨询</p>
+                            <p class="mb-2">5.大数据技术咨询</p>
+                            <p class="mb-2">6.金融行业容灾咨询</p>
+                            <p class="mb-2">7.DevOps技术咨询</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card-div">
+                <div class="card explore-feature pro-ms border-0 shadow">
+                    <a href="javascript:void(0)">
+                        <div class="card-top text-center">
+                            <h5>方案设计</h5>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <p class="mb-2">1.云选型、基础架构规划设计</p>
+                            <p class="mb-2">2.云IT建设规划及技术方向选型</p>
+                            <p class="mb-2">3.应用、业务及数据上云规划设计</p>
+                            <p class="mb-2">4.云安全架构解决方案设计</p>
+                            <p class="mb-2">5.大数据解决方案规划及设计</p>
+                            <p class="mb-2">6.保险业混合云容灾解决方案设计</p>
+                            <p class="mb-2">7.DevOps 解决方案设计</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card-div">
+                <div class="card explore-feature pro-ms border-0 shadow">
+                    <a href="javascript:void(0)">
+                        <div class="card-top text-center">
+                            <h5>方案设计</h5>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <p class="mb-2">1.云基础架构、基础服务部署实施</p>
+                            <p class="mb-2">2.云IT实施路径规划</p>
+                            <p class="mb-2">3.应用、业务及数据上云迁移实施</p>
+                            <p class="mb-2">4.合规、等保及安全加固实施</p>
+                            <p class="mb-2">5.数据湖部署、数据集成、数据开发</p>
+                            <p class="mb-2">6.保险业IT系统容灾实施建设</p>
+                            <p class="mb-2">7.敏捷开发、CI/CD自动化平台部署</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -117,16 +184,16 @@
         </div>
         <div class="copyright text-center mt-4">
             <p class="information mb-1">2014-2020 版权所有&copy;北京易通云网络技术有限公司</p>
-            <p class="information mb-1">京ICP备2020034517号</p>
-
         </div>
     </div>
 </footer>
+
+
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/common.js"></script>
 <script>
     $(document).ready(function() {
-        $('.nav-item').eq(4).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', '400')
+        $('.nav-item').eq(3).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', '400')
     })
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -137,6 +204,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'UA-7621966-11');
 </script>
 </body>

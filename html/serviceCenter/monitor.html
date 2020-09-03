@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>易通云 - 公司介绍</title>
+    <title>易通云管平台</title>
     <meta name="description" content="易通云专注于为企业提供多云管理服务，凭借先进的理念与领先的技术，帮助企业实现数字化转型。">
     <meta name="keywords" content="云管平台,多云管理平台,云管理平台,CMP,混合云管理,混合云管理平台,私有云管理,混合云解决方案,私有云解决方案">
     <meta name="author" content="北京易通云网络技术有限公司" >
     <meta name="email" content="info@yunity.cn" >
     <meta name="website" content="http://www.yunity.cn" >
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/aboutus/profile.css">
+    <link rel="stylesheet" href="../../css/serviceCenter/monitor.css">
 </head>
 <body>
 <header class="header">
     <div class="header-container">
         <div class="logo">
-<!--            <h1>北京易通云网络技术有限公司</h1>-->
+            <!--            <h1>北京易通云网络技术有限公司</h1>-->
             <img src="../../img/logo.png" alt="">
         </div>
         <div class="top-nav">
@@ -30,14 +31,14 @@
                     <ul class="dropdown-list">
                         <li class><a class="dropdown-link" href="../../html/serviceCenter/cloudMajor.html">云化专业服务</a></li>
                         <li><a class="dropdown-link" href="../../html/serviceCenter/devOps.html">运维管理服务</a></li>
-                        <li><a class="dropdown-link" href="../../html/serviceCenter/monitor.html">监控管理服务</a></li>
+                        <li><a class="dropdown-link" href="javascript:void(0)">监控管理服务</a></li>
                         <li><a class="dropdown-link" href="../../html/serviceCenter/cloudOrigin.html">云原生应用开发</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0)">关于我们</a>
                     <ul class="dropdown-list">
-                        <li class><a class="dropdown-link" href="javascript:void(0)">公司介绍</a></li>
+                        <li class><a class="dropdown-link" href="/html/aboutus/profile.html">公司介绍</a></li>
                         <li><a class="dropdown-link" href="/html/aboutus/news/index.html">近期动态</a></li>
                         <li><a class="dropdown-link" href="/html/aboutus/join.html">加入我们</a></li>
                     </ul>
@@ -51,31 +52,101 @@
         <div class="row justify-content-center">
             <div class="col-lg-12 text-center">
                 <div class="banner-text">
-                    <div class="title mb-3">
-                        公司介绍
+                    <div class="slogan mb-3">
+                        监控管理服务
+                    </div>
+                    <div class="learn-more">
+                        <a href="contact.html">立即咨询&nbsp;&nbsp;<span class="gl"></span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="section">
+<div class="section" id="frame">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" >
             <div class="col-12 text-center">
                 <div class="headline section-title mb-5 pb-2">
-                    <h4 class="title mb-4">关于易通云</h4>
+                    <h4 class="title mb-4">统一监控</h4>
+                    <p class="text-muted mb-0 mx-auto">统一监控采用分层设计理念，按照监控数据链路的逻辑关系，将监控功能分为
+                        指标采集、数据存储、监控服务、视图展示 四层架构</p>
                 </div>
             </div>
         </div>
-        <div class="content">
-            <p class="mb-4">易通云是多云时代技术领先的企业级软件提供商。</p>
-            <p class="mb-4">易通云致力于帮助企业在多云时代更好的构建、运行、管理和保护其IT基础设施和应用，实现数字化转型的目标。</p>
-            <p class="mb-4">易通云的产品与解决方案涵盖以下四个领域：企业级DevOps、云原生运行时、多云管理及安全合规。</p>
-            <p class="mb-4">易通云的研发团队分布在北京、上海、深圳、广州、南京、杭州和成都等地，其团队在企业IT云化转型、管理和运营大规模异构基础设施方面拥有丰富经验，客户覆盖金融、制造、能源、交通运输、电信、传媒、地产、互联网等行业。</p>
+        <div class="img-box">
+            <img src="../../img/fw_picture3.png" alt="">
         </div>
-        <div class="img-zone">
-            <img src="../../img/gywm_picture.png" alt="">
+    </div>
+</div>
+<div class="section bg-dark-gray" id="functions">
+    <div class="container">
+        <div class="row justify-content-center" >
+            <div class="col-12 text-center">
+                <div class="headline section-title mb-5 pb-2">
+                    <h4 class="title mb-4">我们的优势</h4>
+                    <p class="text-muted mb-0 mx-auto">统一监控利用提供的数据采集和数据处理能力，实现对主机、组件、进程、
+                        应用等对象的监控，内置多种检测算法，多种告警收敛规则</p>
+                </div>
+            </div>
+        </div>
+        <div class="align-items-center card-box">
+            <div class="card-div">
+                <div class="card explore-feature pro-ms border-0 shadow">
+                    <a href="javascript:void(0)">
+                        <div class="card-top text-center">
+                            <h5>全方位覆盖</h5>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <p class="mb-2">1.端到端全覆盖贯穿基础层到应用层</p>
+                            <p class="mb-2">2.可视监控中枢全局健康状态一览无余</p>
+                            <p class="mb-2">3.6种通知方式多渠道保障及时沟通</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card-div">
+                <div class="card explore-feature pro-ms border-0 shadow">
+                    <a href="javascript:void(0)">
+                        <div class="card-top text-center">
+                            <h5>超高效处理</h5>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <p class="mb-2">1.需求快速反应平均响应时间仅5.3min</p>
+                            <p class="mb-2">2.问题精准定位加速故障排查及解决</p>
+                            <p class="mb-2">3.告警智能收敛最大程度过滤无效信息</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card-div">
+                <div class="card explore-feature pro-ms border-0 shadow">
+                    <a href="javascript:void(0)">
+                        <div class="card-top text-center">
+                            <h5>高标准服务</h5>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <p class="mb-2">1.遵循ITIL流程满足审计认证的需求</p>
+                            <p class="mb-2">2.领先水平SLA保证事件服务及时响应</p>
+                            <p class="mb-2">3.主动定期复盘不断优化服务体验</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card-div">
+                <div class="card explore-feature pro-ms border-0 shadow">
+                    <a href="javascript:void(0)">
+                        <div class="card-top text-center">
+                            <h5>多场景适配</h5>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <p class="mb-2">1.支持混合多云架构满足复杂的监控需求</p>
+                            <p class="mb-2">2.提供定制方案满足标准外的监控需求</p>
+                            <p class="mb-2">3.不断调校配置保障监控处于最优策略</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -117,16 +188,16 @@
         </div>
         <div class="copyright text-center mt-4">
             <p class="information mb-1">2014-2020 版权所有&copy;北京易通云网络技术有限公司</p>
-            <p class="information mb-1">京ICP备2020034517号</p>
-
         </div>
     </div>
 </footer>
+
+
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/common.js"></script>
 <script>
     $(document).ready(function() {
-        $('.nav-item').eq(4).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', '400')
+        $('.nav-item').eq(3).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', '400')
     })
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -137,6 +208,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'UA-7621966-11');
 </script>
 </body>

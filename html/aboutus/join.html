@@ -27,6 +27,24 @@
                 <li class="nav-item"><a class="nav-link" href="/html/products.html">产品</a></li>
                 <li class="nav-item"><a class="nav-link" href="/html/solution.html">解决方案</a></li>
                 <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">服务中心</a>
+                    <ul class="dropdown-list">
+                        <li class><a class="dropdown-link" href="../../html/serviceCenter/cloudMajor.html">云化专业服务</a></li>
+                        <li><a class="dropdown-link" href="../../html/serviceCenter/devOps.html">运维管理服务</a></li>
+                        <li><a class="dropdown-link" href="../../html/serviceCenter/monitor.html">监控管理服务</a></li>
+                        <li><a class="dropdown-link" href="../../html/serviceCenter/cloudOrigin.html">云原生应用开发</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">服务中心</a>
+                    <ul class="dropdown-list">
+                        <li class><a class="dropdown-link" href="/html/aboutus/profile.html">云化专业服务</a></li>
+                        <li><a class="dropdown-link" href="/html/aboutus/news/index.html">运维管理服务</a></li>
+                        <li><a class="dropdown-link" href="/html/aboutus/join.html">监控管理服务</a></li>
+                        <li><a class="dropdown-link" href="/html/aboutus/join.html">云原生应用开发</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0)">关于我们</a>
                     <ul class="dropdown-list">
                         <li class><a class="dropdown-link" href="/html/aboutus/profile.html">公司介绍</a></li>
@@ -191,7 +209,7 @@
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/jquery.dataTables.min.js"></script>
-<!--<script src="../../js/common.js"></script>-->
+<script src="../../js/common.js"></script>
 <script>
     function getTableData(domId, type) {
         var oTable;
@@ -256,7 +274,7 @@
         getTableData('#table3', 'sale')
         getTableData('#table4', 'trainee')
 
-        $('.nav-item').eq(3).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', '400')
+        $('.nav-item').eq(4).children().eq(0).css('color', '#fff').css('cursor', 'default').css('font-size', '18px').css('font-weight', '400')
         $('.header').css('background-color', 'rgb(11, 11, 11)')
 
         // oTable = $("#table1").dataTable({

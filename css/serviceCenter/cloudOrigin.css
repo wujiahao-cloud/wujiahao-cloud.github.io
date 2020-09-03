@@ -1,0 +1,99 @@
+.banner{
+    background: url("../../img/fw_banner.png") no-repeat center bottom;
+}
+.gl{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    -webkit-transform:rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.banner-text .learn-more a{
+    color: white;
+}
+
+.card-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-div {
+    width: 30%;
+}
+.card-div .card {
+    width: 85%;
+    margin: 0 auto;
+}
+.card {
+    border-top: 5px solid #acb5bd !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.card-top {
+    padding: 20px 0;
+    color: #000;
+    background-color: #fff;
+}
+.card-bottom {
+    padding: 20px;
+    color: #000;
+    background-color: #f5f7fb;
+    min-height: 150px;
+}
+.card-bottom p{
+    text-align: left;
+}
+
+.application-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.application-div{
+    width: 25%;
+    min-height: 200px;
+}
+.application-div .application{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+.application-div .img-container{
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 10px;
+}
+.application-div .img-container img{
+    width: 100%;
+}
+.application-div h5{
+    color: black;
+}
+
+.application-bottom {
+    padding: 20px;
+    color: #000;
+    min-height: 120px;
+}
+.application-bottom p{
+    color: grey;
+    line-height: 25px;
+    text-align: left;
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .card-bottom{
+        min-height: 180px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    .card-bottom{
+        min-height: 180px;
+    }
+}
